@@ -76,7 +76,7 @@ async fn user_message(
         SignalMessage::SessionJoin(session_id) => {
             session_join(sessions, connections, user_id, session_id).await?;
         }
-        // pass offer to the other user in session without changing anything
+        // pass offer to the other user igun session without changing anything
         SignalMessage::SdpOffer(session_id, offer) => {
             sdp_offer(sessions, connections, user_id, session_id, offer).await?;
         }
